@@ -39,7 +39,7 @@ def count_posts(user_name, time_frame_in_weeks):
     return post_count
 
 def emotionAnalysis(text):
-    authenticator = IAMAuthenticator('4uXz1_-vBcEKqNit9BaztlZ-S3UWxim91H5t07c32Coe')
+    authenticator = IAMAuthenticator('INSERT CODE HERE')
     natural_language_understanding = NaturalLanguageUnderstandingV1( version='2020-08-01', authenticator = authenticator)
     natural_language_understanding.set_service_url('https://api.us-south.natural-language-understanding.watson.cloud.ibm.com/instances/b6c48743-410e-41d0-9fd2-f940ecec8342')
     result = natural_language_understanding.analyze(text = text, features = Features(sentiment = SentimentOptions(document=True), emotion = EmotionOptions(document=True)))
